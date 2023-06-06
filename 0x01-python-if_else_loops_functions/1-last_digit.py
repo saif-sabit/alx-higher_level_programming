@@ -12,4 +12,4 @@ elif int(n) == 0:
     cond = "and is 0"
 else:
     cond = "and is less than 6 and not 0"
-print(f"Last digit of {number:d} is {n:d} {cond}")
+print(f"Last digit of {number:d} is {n} {cond}")
