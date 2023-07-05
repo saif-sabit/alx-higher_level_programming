@@ -50,6 +50,7 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return (0)
         return ((self.__width * 2) + (self.__height * 2))
+
     def __str__(self):
         """Return empty string or print rectangle"""
 
@@ -57,7 +58,7 @@ class Rectangle:
             return ("")
         else:
             shape = []
-            for i in range(self.height):
+            for i in range (self.height):
                 for j in range (self.width):
                     shape.append('#')
                 shape.append("\n")
