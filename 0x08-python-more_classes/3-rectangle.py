@@ -59,7 +59,6 @@ class Rectangle:
         else:
             shape = []
             for i in range(self.height):
-                for j in range(self.width):
-                    shape.append('#')
+                [shape.append('#') for j in range(self.__width)]
             shape.append("\n")
         return ("".join(shape))
