@@ -66,7 +66,7 @@ class Rectangle:
             shape = []
             for i in range(self.__height):
                 for j in range(self.__width):
-                    shape.append(self.print_symbol)
+                    shape.append(str(self.print_symbol))
                 shape.append("\n")
         return ("".join(shape))
 
