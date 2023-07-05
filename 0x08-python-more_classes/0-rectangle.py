@@ -2,7 +2,6 @@
 """Rectangle class."""
 
 
-
 class Rectangle:
     """Rectangle class body"""
     pass
