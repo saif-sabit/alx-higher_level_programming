@@ -54,7 +54,7 @@ class Rectangle:
     def __str__(self):
         """Return empty string or print rectangle"""
 
-        if self.width == 0 or self.height == 0:
+        if self.__width == 0 or self.__height == 0:
             return ("")
         else:
             shape = []
