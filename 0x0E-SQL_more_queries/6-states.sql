@@ -2,6 +2,6 @@
 -- Create database hbtn_0d_usa
 CREATE DATABASE IF NOT EXISTS 'hbtn_0d_usa';
 -- Use our database
-use hbtn_0d_usa;
+use 'hbtn_0d_usa';
 -- Create table states 
 CREATE TABLE IF NOT EXISTS states(id INT NOT NULL PRIMARY KEY, name NOT NULL VARCHAR(256));
