@@ -2,7 +2,6 @@
 
 if (process.argv.length <= 2) {
 	console.log('No argument');
-}
-else {
+} else {
         console.log('Argument found');
 }
