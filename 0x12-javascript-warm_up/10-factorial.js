@@ -1,8 +1,8 @@
 #!/usr/bin/node
-function facrtorial(a){
-        if (a ===0){
-                return (1);
-        }
-        return a * facrtorial(a - 1);
+function facrtorial (a) {
+  if (a === 0) {
+    return (1);
+  }
+  return a * facrtorial(a - 1);
 }
-facrtorial(parseInt(process.argv[2]));
+console.log(facrtorial(parseInt(process.argv[2])));
