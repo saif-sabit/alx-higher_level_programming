@@ -6,7 +6,7 @@ class Square extends Square1 {
       let s = '';
       for (let j = 0; j < this.width; j++) {
         if (c) {
-          s += 'c';
+          s += c;
         } else {
           s += 'X';
         }
