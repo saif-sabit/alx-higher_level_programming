@@ -1,7 +1,6 @@
 #!/usr/bin/node
-import { argv } from 'node:process';
-if (parseInt(argv[1]) == NaN) {
-        console.log("Not a number");
+if (parseInt(process.argv[2])) {
+  console.log('My number:' + parseInt(process.argv[2]));
 } else {
-        console.log("My number:" + parseInt(argv[1]));
+  console.log('Not a number');
 }
