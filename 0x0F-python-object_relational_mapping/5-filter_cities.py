@@ -6,10 +6,12 @@ if __name__ == "__main__":
     db = MySQLdb.connect("localhost", user=sys.argv[1],
                          password=sys.argv[2], db=sys.argv[3], port=3306)
     c = db.cursor()
-    c.execute("SELECT cities.name FROM\
-            cities LEFT JOIN states ON states.name LIKE %s", (sys.argv[4],))
+    c.execute("SELECT * FROM\
+            cities LEFT JOIN states ON cities.state_id = states.id")
     rows = c.fetchall()
     for row in rows:
-        print(row)
+        if (row[4] == sys.argv[4]):
+           rr = "". join(row[2] +" ,")
+    print(rr)
     c.close()
     db.close()
