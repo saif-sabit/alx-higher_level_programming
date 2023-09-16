@@ -7,11 +7,8 @@ if __name__ == "__main__":
                          password=sys.argv[2], db=sys.argv[3], port=3306)
     c = db.cursor()
     c.execute("SELECT * FROM\
-            cities LEFT JOIN states ON cities.state_id = states.id")
+            cities INNER JOIN states ON cities.state_id = states.id")
     rows = c.fetchall()
-    for row in rows:
-        if (row[4] == sys.argv[4]):
-           rr = "". join(row[2] +" ,")
-    print(rr)
+    print(", ".join([rr[2] for rr in rows if rr[4] == sys.argv[4]]))
     c.close()
     db.close()
