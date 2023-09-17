@@ -14,7 +14,7 @@ if __name__ == "__main__":
 
     session = Session()
     del_rows = State.delete().where(State.name.like('%a%'))
-    if del_row:
+    if del_rows:
         session.execute(del_rows)
         session.commit()
     session.close()
