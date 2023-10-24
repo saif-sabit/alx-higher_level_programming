@@ -1,23 +1,23 @@
 #!/usr/bin/node
 // Write a script that computes the number of tasks completed by user id.
 
-const request = require('request');
+const request = require('request')
 
 request.get(process.argv[2], { json: true }, (error, response, body) => {
   if (error) {
-    console.log(error);
-    return;
+    console.log(error)
+    return
   }
 
-  const tasksCompleted = {};
+  const tasksCompleted = {}
   body.forEach((todo) => {
     if (todo.completed) {
       if (!tasksCompleted[todo.userId]) {
-        tasksCompleted[todo.userId] = 1;
+        tasksCompleted[todo.userId] = 1
       } else {
-        tasksCompleted[todo.userId] += 1;
+        tasksCompleted[todo.userId] += 1
       }
     }
-  });
-  console.log(tasksCompleted);
-});
+  })
+  console.log(tasksCompleted)
+})
